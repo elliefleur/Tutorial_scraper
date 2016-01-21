@@ -10,7 +10,7 @@ html = scraperwiki.scrape("http://uk.soccerway.com/teams/netherlands/fortuna-sit
 #print html
 #this prints the results of the scrape function on the soccerway url
 root = lxml.html.fromstring(html)
-#this performs the fromstring function from the lxml.html library on the variable html which is the results of the scrape function on the soccerway url and turns it into a varible called root
+#this performs the fromstring function from the lxml.html library on the variable html which is the results of the scrape function on the soccerway url and turns the varible called root into an object
 tds = root.cssselect("td")
 #uses the cssselect method on the root to grab "td" tags and put in variable called tds - change td to a different selector to grab something else on the page
 
