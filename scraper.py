@@ -14,6 +14,9 @@ root = lxml.html.fromstring(html)
 tds = root.cssselect("td")
 #uses the cssselect method on the root to grab "td" tags and put in variable called tds - change td to a different selector to grab something else on the page
 print tds
+for td in tds:
+  print lxml.html.tostring(td)
+  print td.text
 
 # # Write out to the sqlite database using scraperwiki library
 # scraperwiki.sqlite.save(unique_keys=['name'], data={"name": "susan", "occupation": "software developer"})
