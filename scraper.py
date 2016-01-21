@@ -7,7 +7,7 @@ import lxml.html
 #this imports the lxml.html library of functions
 html = scraperwiki.scrape("http://uk.soccerway.com/teams/netherlands/fortuna-sittard/")
 #this uses the scrape function from the scraperwiki library on the url uk.soccerway...fortuna-sittard and turns it into a variable called html. Change url for a different website
-print html
+#print html
 #this prints the results of the scrape function on the soccerway url
 root = lxml.html.fromstring(html)
 #this performs the fromstring function from the lxml.html library on the variable html which is the results of the scrape function on the soccerway url and turns it into a varible called root
